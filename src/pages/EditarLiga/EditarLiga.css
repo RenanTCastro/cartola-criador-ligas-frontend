@@ -1,9 +1,9 @@
 
-.visualizarLiga--container{
+.editarLiga--container{
 
 }
 
-.visualizarLiga--title{
+.editarLiga--title{
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 50px;
@@ -11,17 +11,17 @@
     margin: 0px;
 }
 
-.visualizarLiga--description{
+.editarLiga--description{
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 18px;
 }
 
-.visualizarTime--button-container{
+.editarLiga--button-container{
     margin-bottom: 10px;
 }
 
-.visualizarTime--buttons{
+.editarLiga--buttons{
     background: #FFFFFF;
     border-radius: 5px;
     width: auto;
@@ -36,13 +36,13 @@
     padding: 0 15px;
 }
 
-.visualizarTime--table-header{
+.editarLiga--table-header{
     padding: 12px 20px;
     background-color: white;
     color: #222222;
 }
 
-.visualizarTime--table-body{
+.editarLiga--table-body{
     padding: 12px 20px;
     background-color: #E9E9E9;
     color: #222222;

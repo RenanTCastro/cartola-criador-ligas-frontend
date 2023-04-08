@@ -1,0 +1,26 @@
+
+.visualizarLiga--title{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 50px;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.visualizarLiga--description{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.visualizarLiga--table-header{
+    padding: 12px 20px;
+    background-color: white;
+    color: #222222;
+}
+
+.visualizarLiga--table-body{
+    padding: 12px 20px;
+    background-color: #E9E9E9;
+    color: #222222;
+}
