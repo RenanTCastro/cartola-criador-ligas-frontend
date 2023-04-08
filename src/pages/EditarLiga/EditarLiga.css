@@ -1,0 +1,49 @@
+
+.visualizarLiga--container{
+
+}
+
+.visualizarLiga--title{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 50px;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.visualizarLiga--description{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.visualizarTime--button-container{
+    margin-bottom: 10px;
+}
+
+.visualizarTime--buttons{
+    background: #FFFFFF;
+    border-radius: 5px;
+    width: auto;
+    height: 50px;
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 0 15px;
+}
+
+.visualizarTime--table-header{
+    padding: 12px 20px;
+    background-color: white;
+    color: #222222;
+}
+
+.visualizarTime--table-body{
+    padding: 12px 20px;
+    background-color: #E9E9E9;
+    color: #222222;
+}
