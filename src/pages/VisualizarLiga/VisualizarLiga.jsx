@@ -1,9 +1,11 @@
 import React from 'react';
+
 import Logo from '../../images/logo.svg';
  
 import "./VisualizarLiga.css";
 
 export function VisualizarLiga(){
+
     return(
         <div>
             <img src={Logo} alt="Logo" />
