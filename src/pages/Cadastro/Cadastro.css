@@ -1,0 +1,50 @@
+ /* Page CSS */
+
+ .cadastro--text{
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 2px;   
+    color: white;
+    text-align: left;
+}
+
+.cadastro--input{
+    width: 350px;
+    border: 2px solid #E9E9E9;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    height: 40px;
+
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.cadastro--text-link{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.cadastro--button{
+    width: 370px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+    color: #222222;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cadastro--text-register{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+}
