@@ -23,6 +23,6 @@ https://github.com/RenanTCastro/cartola-criador-ligas-frontend
 
 * Login do usuário
 * Criar conta
-* Criar liga
 * Minha conta
 * Exibir liga
+* Editar Liga
