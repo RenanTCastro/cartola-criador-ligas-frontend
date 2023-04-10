@@ -8,7 +8,7 @@ export function MinhaConta(){
 
     return(
         <div>
-            <img src={Logo} alt="Logo" style={{marginTop: "80px"}}/>
+            <img src={Logo} alt="Logo" style={{marginTop: "6vw"}}/>
             <h1 className='minhaConta--title'>Olá, pronto para mitar?</h1>
             <p className='minhaConta--description'>
                 Bem-vindo(a) à sua conta! Gostaríamos de lembrar que para cada liga criada, um crédito 
@@ -38,10 +38,10 @@ export function MinhaConta(){
                 <div>Rodada premiada</div>
             </div>
 
-            <div style={{marginBottom: "40px"}}>
+            <div className='minhaConta--buttons-bottom'>
                 <button 
                     className='minhaConta--buttons' 
-                    style={{backgroundColor: 'white', color:'#222222', padding: "0 50px"}}>
+                    style={{backgroundColor: 'white', color:'#222222'}}>
                         Sair
                 </button>
                 <button 

@@ -3,45 +3,44 @@
 .minhaConta--title{
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 50px;
+    font-size: 3.743vw;
     color: #FFFFFF;
     margin: 0px;
 }
 
 .minhaConta--description{
-    width: 600px;
+    width: 44.910vw;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.198vw;
 }
 
 .minhaConta--credit-text{
-    width: 600px;
+    width: 44.910vw;
     color: #FE7301;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 16px;  
+    font-size: 1.198vw;  
 }
 
 .minhaConta--buttons{
-    border-radius: 5px;
+    border-radius: 0.374vw;
     width: auto;
-    height: 50px;
+    height: 3.743vw;
     border: none;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.347vw;
     color: white;
     cursor: pointer;
-    margin-left: 15px;
-    padding: 0 20px;
+    padding: 0 1.497vw;
 }
 .minhaConta--table-title{
     color: #222222;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 18px;
-    margin: 0 0 0 10px;
+    font-size: 1.347vw;
+    margin: 0 0 0 0.749vw;
 }
 
 .minhaconta--table-ligas-container-header{
@@ -49,24 +48,70 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 2.246vw;
     background-color: white;
-    border-radius: 5px 5px 0px 0px;
-    padding: 10px;
+    border-radius: 0.374vw 0.374vw 0px 0px;
+    padding: 0.749vw;
 }
 
 .minhaconta--table-ligas-container-body{
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 5px;
+    gap: 0.374vw;
 
     margin-top: 0;
-    margin-bottom: 30px;
-    padding: 20px;
+    margin-bottom: 2.246vw;
+    padding: 1.497vw;
 
     color: #222222;
-    font-size: 16px;
+    font-size: 1.198vw;
     background-color: #E9E9E9;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 0.374vw 0.374vw;
+}
+
+.minhaConta--buttons-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;        
+    gap: 3vw;
+    margin-bottom: 2.994vw;
+}
+
+@media(max-width:600px){
+    .minhaConta--title{
+        font-size: 6.25vw;
+    }
+    .minhaConta--description{
+        width: 80%;
+        margin: 10px auto;
+        font-size: 3vw;
+    }
+    .minhaConta--credit-text{
+        width: 80%;
+        margin: 10px auto;
+        font-size: 4vw;
+    }
+    .minhaConta--buttons{
+        font-size: 2.5vw;
+        height: 7vw;
+    }
+    .minhaConta--table-title{
+        font-size: 3vw;
+    }
+    .minhaconta--table-ligas-container-header{
+        margin: 5vw 10% 0 10%;
+    }
+    .minhaconta--table-ligas-container-body{
+        margin-top: 0;
+        margin-bottom: 5vw;
+        margin: 0 10% 5vw 10%;
+        font-size: 3vw;
+    }
+    .minhaConta--buttons-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;        
+        gap: 3vw;
+    }
 }
