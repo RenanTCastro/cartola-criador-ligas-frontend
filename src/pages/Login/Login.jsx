@@ -1,12 +1,29 @@
 import React, { useState } from 'react';
 
+
 import Logo from '../../images/logo.svg';
 import { Modal } from '../../components/Modal/Modal';
+
+import auth from "../../utils/auth";
+import api from "../../services/api";
+
 import "./Login.css";
 
 export function Login(){
     const [modal, setModal] = useState(true);
+    const [userData, setUserData] = useState({});
 
+    const handleClick = async ()=>{
+        await api.post('/login', userData)
+        .then((res)=>{
+            auth.save(res.data);
+            window.location="/produtos";
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+    }
+    
     return(
         <div>
             {modal &&

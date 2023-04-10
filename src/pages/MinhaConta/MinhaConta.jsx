@@ -19,7 +19,8 @@ export function MinhaConta(){
             <p className='minhaConta--credit-text'>Seus creditos: 1</p>
             <button 
                 className='minhaConta--buttons' 
-                style={{backgroundColor: ' #FE7301'}}>
+                style={{backgroundColor: ' #FE7301'}}
+                onClick={()=>window.location.assign("https://api.whatsapp.com/send?phone=5511912345678&text=Olá.%20Vi%20o%20produto%20no%20Facebook,%20aguardo%20mais%20informações")}>
                     Comprar créditos
             </button>
 
