@@ -22,5 +22,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 2.994vw;
+}
+
+@media(max-width:600px){
+    .modal--container{
+        padding: 8vw;
+    }
 }
