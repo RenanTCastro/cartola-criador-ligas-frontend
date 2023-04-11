@@ -13,6 +13,11 @@ export function Login(){
     const [modal, setModal] = useState(true);
     const [userData, setUserData] = useState({});
 
+    const handleInput = (e)=>{
+        setUserData({...userData, [e.target.name] : e.target.value});
+        console.log(userData)
+    }
+    
     const handleClick = async ()=>{
         await api.post('/login', userData)
         .then((res)=>{
@@ -63,9 +68,9 @@ export function Login(){
 
             <img src={Logo} alt="Logo"/>
             <p className='login--text'>Email</p>
-            <input className='login--input' type="email"/>
+            <input className='login--input' type="email" onChange={handleInput} name="email"/>
             <p className='login--text'>Senha</p>
-            <input className='login--input' type="password"/>
+            <input className='login--input' type="password" onChange={handleInput} name="password"/>
             <p className='login--text-reset'>Não sabe sua senha?
                 <a className='login--text-link' onClick={()=>setModal(!modal)}> Clique aqui.</a>
             </p>

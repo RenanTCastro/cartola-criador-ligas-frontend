@@ -2,31 +2,31 @@
 
 .login--text{
     font-weight: 400;
-    font-size: 16px;
-    margin: 10px 2px;   
+    font-size: 1.198vw;
+    margin: 0.749vw 0.150vw;   
     color: white;
     text-align: left;
 }
 
 .login--input{
-    width: 350px;
-    border: 2px solid #E9E9E9;
+    width: 26.198vw;
+    border: 0.150vw solid #E9E9E9;
     background-color: transparent;
     color: white;
-    border-radius: 5px;
+    border-radius: 0.374vw;
     outline: none;
-    height: 40px;
+    height: 2.994vw;
 
     font-family: 'Poppins';
     font-weight: 400;
-    font-size: 14px;
-    padding-left: 10px;
+    font-size: 1.048vw;
+    padding-left: 0.749vw;
 }
 
 .login--text-reset{
     font-weight: 400;
-    font-size: 12px;
-    line-height: 22px;
+    font-size: 0.898vw;
+    line-height: 1.647vw;
     text-align: left;
 }
 
@@ -37,23 +37,23 @@
 }
 
 .login--button{
-    width: 370px;
-    height: 40px;
+    width: 27.695vw;
+    height: 2.994vw;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.374vw;
     outline: none;
     cursor: pointer;
 
     color: #222222;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.198vw;
 }
 
 .login--text-register{
     font-weight: 400;
-    font-size: 12px;
-    line-height: 22px;
+    font-size: 0.898vw;
+    line-height: 1.647vw;
 }
 
 
@@ -65,9 +65,9 @@
 }
 
  .login-modal-info{
-    width: 580px;
+    width: 43.413vw;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.198vw;
     margin: 0px;
     text-align: center;
     align-self: center;
@@ -75,41 +75,85 @@
  
  .login--modal-text{
     font-weight: 400;
-    font-size: 16px;
-    margin: 10px 2px;
+    font-size: 1.198vw;
+    margin: 0.749vw 0.150vw;
     text-align: left;
 }
 
 .login--modal-input{
-    width: 580px;
-    border: 2px solid #E9E9E9;
-    border-radius: 5px;
+    width: 43.413vw;
+    border: 0.150vw solid #E9E9E9;
+    border-radius: 0.374vw;
     outline: none;
-    height: 30px;
+    height: 2.246vw;
 
     font-family: 'Poppins';
     font-weight: 400;
-    font-size: 14px;
-    padding-left: 10px;
+    font-size: 1.048vw;
+    padding-left: 0.749vw;
 }
 
 .login--modal-button-container{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 0.749vw;
+    margin-top: 1.497vw;
 }
 
 .login--modal-button{
-    width: 150px;
-    height: 40px;
+    width: 11.228vw;
+    height: 2.994vw;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.374vw;
     outline: none;
     color: white;
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 14px;
+    font-size: 1.048vw;
     cursor: pointer;
+}
+
+@media(max-width:600px){
+    .login--text{
+        font-size: 4vw;
+    }
+    .login--input{
+        width: 80vw;
+        font-size: 3vw;
+        height: 8vw;
+    }
+    .login--text-reset{
+        font-size: 3vw;
+    }
+    .login--button{
+        width: 80vw;
+        font-size: 4vw;
+        height: 8vw;
+    }
+    .login--text-register{
+        font-size: 3vw;
+    }
+    .login--modal-text{
+        font-size: 4vw;
+    }
+    .login--modal-input{
+        width: 60vw;
+        font-size: 3vw;
+        height: 6vw;
+    }
+    .login-modal-info{
+        width: 65vw;
+        font-size: 3.5vw;
+        margin-bottom: 4vw;
+    }
+    .login--modal-button-container{
+        gap: 2vw;
+    }
+    .login--modal-button{
+        width: 20vw;
+        font-size: 3vw;
+        height: 6vw;
+        margin-top: 2vw;
+    }
 }
