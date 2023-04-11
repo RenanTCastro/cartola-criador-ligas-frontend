@@ -48,3 +48,46 @@
     font-size: 12px;
     line-height: 22px;
 }
+
+.cadastro--modal-container{
+    display: flex;
+    flex-direction: column;
+    color: #222222;
+}
+
+.cadastro--modal-button{
+    width: 11.228vw;
+    height: 2.994vw;
+    border: none;
+    border-radius: 0.374vw;
+    outline: none;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1.048vw;
+    cursor: pointer;
+}
+
+
+.cadastro-modal-info-error{
+    width: 14.970vw;
+    font-weight: 600;
+    font-size: 1.198vw;
+    margin: 0 0 0.749vw 0;
+    text-align: center;
+    align-self: center;
+ }
+
+@media(max-width:600px){
+    .cadastro-modal-info-error{
+        width: 50vw;
+        font-size: 3.5vw;
+        margin-bottom: 2vw;
+    }
+    .cadastro--modal-button{
+        width: 20vw;
+        font-size: 3vw;
+        height: 6vw;
+        margin-top: 2vw;
+    }
+}

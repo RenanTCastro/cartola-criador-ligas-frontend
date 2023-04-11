@@ -11,7 +11,7 @@ import "./Login.css";
 
 export function Login(){
     const [modal, setModal] = useState(false);
-    const [modalError, setModalError] = useState(true);
+    const [modalError, setModalError] = useState(false);
     const [userData, setUserData] = useState({});
 
     const handleInput = (e)=>{
