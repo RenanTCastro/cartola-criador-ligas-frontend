@@ -10,12 +10,12 @@ import api from "../../services/api";
 import "./Login.css";
 
 export function Login(){
-    const [modal, setModal] = useState(true);
+    const [modal, setModal] = useState(false);
+    const [modalError, setModalError] = useState(true);
     const [userData, setUserData] = useState({});
 
     const handleInput = (e)=>{
         setUserData({...userData, [e.target.name] : e.target.value});
-        console.log(userData)
     }
     
     const handleClick = async ()=>{
@@ -25,7 +25,7 @@ export function Login(){
             window.location="/produtos";
         })
         .catch((err)=>{
-            console.log(err);
+            setModalError(true);
         });
     }
     
@@ -66,6 +66,26 @@ export function Login(){
                 </Modal>
             }
 
+            {
+                modalError &&
+                <Modal>
+                    <div className='login--modal-container'>
+                        <p className='login-modal-info-error'>
+                            Erro ao fazer login, tente novamente.
+                        </p>
+                        <div>
+                            <button
+                                className='login--modal-button'
+                                style={{backgroundColor: '#222222'}}
+                                onClick={()=>setModalError(!modalError)}>
+                                    Fechar
+                            </button>
+                        </div>
+                    </div>
+                </Modal>
+
+            }
+
             <img src={Logo} alt="Logo"/>
             <p className='login--text'>Email</p>
             <input className='login--input' type="email" onChange={handleInput} name="email"/>
@@ -74,7 +94,7 @@ export function Login(){
             <p className='login--text-reset'>Não sabe sua senha?
                 <a className='login--text-link' onClick={()=>setModal(!modal)}> Clique aqui.</a>
             </p>
-            <button className='login--button'>ENTRAR</button>
+            <button className='login--button' onClick={handleClick}>ENTRAR</button>
             <p className='login--text-register'>Não tem uma conta?
                 <a href='http://localhost:3000/' className='login--text-link'> Criar conta.</a>
             </p>

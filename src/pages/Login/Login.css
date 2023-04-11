@@ -72,6 +72,15 @@
     text-align: center;
     align-self: center;
  }
+
+ .login-modal-info-error{
+    width: 14.970vw;
+    font-weight: 600;
+    font-size: 1.198vw;
+    margin: 0 0 0.749vw 0;
+    text-align: center;
+    align-self: center;
+ }
  
  .login--modal-text{
     font-weight: 400;
@@ -155,5 +164,10 @@
         font-size: 3vw;
         height: 6vw;
         margin-top: 2vw;
+    }
+    .login-modal-info-error{
+        width: 50vw;
+        font-size: 3.5vw;
+        margin-bottom: 2vw;
     }
 }
