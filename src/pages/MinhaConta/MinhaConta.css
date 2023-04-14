@@ -78,6 +78,23 @@
     margin-bottom: 2.994vw;
 }
 
+.minhaConta--modal-delete-account-text{
+    font-weight: 400;
+    font-size: 1.198vw;
+    color: #222222;
+    width: 21.962vw;
+    margin: 0;
+}
+
+.minhaConta--modal-container-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;        
+    gap: 2vw;
+    margin-top: 1.497vw;
+}
+
+
 @media(max-width:600px){
     .minhaConta--title{
         font-size: 6.25vw;

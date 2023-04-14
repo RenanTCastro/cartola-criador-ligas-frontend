@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import { Modal } from '../../components/Modal/Modal';
 import Logo from '../../images/logo.svg';
  
 import "./MinhaConta.css";
@@ -9,6 +10,7 @@ import api from '../../services/api';
 export function MinhaConta(){
     const [userData, setUserData] = useState({});
     const [leagueData, setLeagueData ] = useState();
+    const [modalDelete, setModalDelete] = useState(false);
     const user_id = localStorage.getItem("user_id");
     
     useEffect(()=>{
@@ -40,8 +42,43 @@ export function MinhaConta(){
         });
     },[]);
 
+    const handleDeleteAccount = ()=>{
+        api.delete(`/deleteUser/${user_id}`)
+        .then((res)=>{
+            window.location="/login";
+            setModalDelete(!modalDelete);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+    }
+    
     return(
         <div>
+            {modalDelete &&
+            <Modal>
+                <div>
+                    <div className='minhaConta--modal-delete-account-text'>
+                        Tem certeza que deseja excluir sua conta? Todos créditos disponíveis 
+                        serão perdidos. Você não poderá reverter essa ação depois
+                    </div>
+                    <div className='minhaConta--modal-container-buttons'>
+                        <button 
+                        className='minhaConta--buttons' 
+                        style={{backgroundColor: '#222222'}}
+                        onClick={()=>setModalDelete(!modalDelete)}>
+                            Cancelar
+                        </button>
+                        <button 
+                        className='minhaConta--buttons' 
+                        style={{backgroundColor: '#FE0101'}}
+                        onClick={handleDeleteAccount}>
+                            Excluir
+                        </button>
+                    </div>
+                </div>
+            </Modal>
+            }
             <img src={Logo} alt="Logo" style={{marginTop: "6vw"}}/>
             <h1 className='minhaConta--title'>Olá, pronto para mitar?</h1>
             <p className='minhaConta--description'>
@@ -84,7 +121,8 @@ export function MinhaConta(){
                 </button>
                 <button 
                     className='minhaConta--buttons' 
-                    style={{backgroundColor: '#FE0101'}}>
+                    style={{backgroundColor: '#FE0101'}}
+                    onClick={()=>setModalDelete(!modalDelete)}>
                         Excluir conta
                 </button>
             </div>
