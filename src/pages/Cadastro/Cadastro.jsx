@@ -85,7 +85,7 @@ export function Cadastro(){
             <button className='cadastro--button' onClick={handleClick}>CRIAR CONTA</button>
             
             <p className='cadastro--text-register'>Já tem uma conta?
-                <a href='http://localhost:3000/' className='cadastro--text-link'> Fazer login.</a>
+                <a href='/login' className='cadastro--text-link'> Fazer login.</a>
             </p>
         </div>
     );

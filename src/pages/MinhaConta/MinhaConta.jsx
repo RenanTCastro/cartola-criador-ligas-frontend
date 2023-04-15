@@ -44,7 +44,8 @@ export function MinhaConta(){
 
     const handleDeleteAccount = ()=>{
         api.delete(`/deleteUser/${user_id}`)
-        .then((res)=>{
+        .then(()=>{
+            localStorage.clear();
             window.location="/login";
             setModalDelete(!modalDelete);
         })

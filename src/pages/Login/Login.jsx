@@ -22,7 +22,7 @@ export function Login(){
         await api.post('/login', userData)
         .then((res)=>{
             auth.save(res.data);
-            window.location="/produtos";
+            window.location="/minha-conta";
         })
         .catch((err)=>{
             setModalError(true);
@@ -96,7 +96,7 @@ export function Login(){
             </p>
             <button className='login--button' onClick={handleClick}>ENTRAR</button>
             <p className='login--text-register'>Não tem uma conta?
-                <a href='http://localhost:3000/' className='login--text-link'> Criar conta.</a>
+                <a href='/cadastro' className='login--text-link'> Criar conta.</a>
             </p>
         </div>
     );

@@ -131,4 +131,8 @@
         justify-content: center;        
         gap: 3vw;
     }
+    .minhaConta--modal-delete-account-text{
+        font-size: 3vw;
+        width: 60vw;
+    }
 }
