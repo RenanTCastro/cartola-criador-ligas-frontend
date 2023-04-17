@@ -15,7 +15,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/minha-conta" element={<MinhaConta />} />
-          <Route path="/editar-liga" element={<EditarLiga />} />
+          <Route path="/editar-liga/:id" element={<EditarLiga />} />
           <Route path="/liga/:id" element={<VisualizarLiga />} />
         </Routes>
       </header>

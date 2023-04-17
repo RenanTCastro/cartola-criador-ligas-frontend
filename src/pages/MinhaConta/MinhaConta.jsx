@@ -39,7 +39,7 @@ export function MinhaConta(){
             const aux = res.data.map((league)=>{
                 return(
                     <div 
-                        onClick={()=>window.location=`liga/${league.league_id}`}
+                        onClick={()=>window.location=`editar-liga/${league.league_id}`}
                         style={{cursor: "pointer"}}>
                             {league.name}
                     </div>

@@ -1,16 +1,36 @@
-import React from 'react';
+import React, {useEffect, useMemo, useState } from 'react';
 
 import Logo from '../../images/logo.svg';
  
+import api from '../../services/api';
+
 import "./VisualizarLiga.css";
 
 export function VisualizarLiga(){
+    const [leagueData, setLeagueData ] = useState();
+    const id = useMemo(()=>{
+        const url = window.location.href;
+        const parts = url.split('/');
+        const id = parts.pop();
+        return id;
+    })
 
+    useEffect(()=>{
+        api.get(`/getLeague/${id}`)
+        .then((res)=>{
+            setLeagueData(res.data[0]);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+    },[]);
     return(
         <div>
             <img src={Logo} alt="Logo" />
-            <h1 className='visualizarLiga--title'>Liga Milgrau</h1>
-            <p className='visualizarLiga--description'>Aqui fica a descrição da sua liga</p>
+            <h1 className='visualizarLiga--title'>{leagueData?.name ? leagueData?.name : "Nome da liga"}</h1>
+            <p className='visualizarLiga--description'>
+                {leagueData?.description ? leagueData?.description : "Aqui fica a descrição da sua liga"}
+            </p>
 
             <table>
                 <tr>
