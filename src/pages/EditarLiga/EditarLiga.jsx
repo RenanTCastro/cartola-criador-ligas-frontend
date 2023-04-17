@@ -10,8 +10,11 @@ import "./EditarLiga.css";
 
 export function EditarLiga(){
     const [modal, setModal] = useState(false);
+    const [modalAddTeam, setModalAddTeam] = useState(false);
+    const [search, setSearch ] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const [leagueData, setLeagueData ] = useState();
+    const [searchedTeams, setSearchedTeams ] = useState([]);
     const [newLeagueData, setnewLeagueData ] = useState();
     const id = useMemo(()=>{
         const url = window.location.href;
@@ -51,6 +54,42 @@ export function EditarLiga(){
         .then((res)=>{
             setModal(!modal);
             window.location.reload();
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+        setIsLoading(false);
+    }
+
+    const handleInputSearch = (e)=>{
+        setSearch({...search, [e.target.name] : e.target.value});
+    }
+
+    const handleSearch = () => {
+        setIsLoading(true);	
+        api.post(`/getTeam`, search)
+        .then((res)=>{
+            const aux = res.data.map((team)=>{
+                return(
+                    <div className='editarLiga--addteam-container'>
+                        <div className='editarLiga--addteam-info-container'>
+                            <img src={team.url_escudo_svg} alt="Logo" className='editarLiga--addteam-img'/>
+                            <div  className='editarLiga--team-text-container'>
+                                <p className='editarLiga--addteam-team-name'>{team.nome}</p>
+                                <p className='editarLiga--addteam-tecnico-name'>{team.nome_cartola}</p>
+                            </div>
+                        </div>
+                        <button 
+                            className='editarLiga--addteam-button'
+                            style={{backgroundColor: '#21A70B'}}>
+                                Adicionar
+                        </button>
+                    </div>
+
+                );
+            }
+            );
+            setSearchedTeams(aux);
         })
         .catch((err)=>{
             console.log(err);
@@ -103,13 +142,43 @@ export function EditarLiga(){
                 </Modal>
             }
 
+            {modalAddTeam &&
+                <Modal>
+                <div className='editarLiga--modal-container'>
+                    <p className='editarLiga--modal-text'>Busque o time</p>
+                    <div>
+                        <input className='editarLiga--modal-input' onChange={handleInputSearch} name="search"/>
+                        <button 
+                            className='editarLiga--modal-button-search' 
+                            style={{backgroundColor: '#21A70B'}} 
+                            onClick={handleSearch}>
+                                Pesquisar
+                        </button>
+                    </div>
+                    
+                    <div className='editarLiga--addteam-teams-container'>
+                        {searchedTeams}
+                    </div>
+
+                    <div className='editarLiga--modal-button-container'>
+                        <button 
+                            className='editarLiga--modal-button' 
+                            style={{backgroundColor: '#222222'}}
+                            onClick={()=>setModalAddTeam(!modalAddTeam)}>
+                                Cancelar
+                        </button>
+                    </div>
+                </div>
+            </Modal>
+            }
+
             <img src={Logo} alt="Logo" />
             <h1 className='editarLiga--title'>{leagueData?.name ? leagueData?.name : "Nome da liga"}</h1>
             <p className='editarLiga--description'> {leagueData?.description ? leagueData?.description : ""}</p>
 
             <div className='editarLiga--button-container'>
                 <button className='editarLiga--buttons' onClick={()=>setModal(!modal)}>✏️ Editar Liga</button>
-                <button className='editarLiga--buttons'>✅ Adicionar Time</button>
+                <button className='editarLiga--buttons' onClick={()=>setModalAddTeam(!modalAddTeam)}>✅ Adicionar Time</button>
                 <button className='editarLiga--buttons'>🔗 Compartilhar</button>
             </div>
 
