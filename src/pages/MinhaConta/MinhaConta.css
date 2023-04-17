@@ -43,7 +43,7 @@
     margin: 0 0 0 0.749vw;
 }
 
-.minhaconta--table-ligas-container-header{
+.minhaConta--table-ligas-container-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,7 +54,7 @@
     padding: 0.749vw;
 }
 
-.minhaconta--table-ligas-container-body{
+.minhaConta--table-ligas-container-body{
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -78,6 +78,8 @@
     margin-bottom: 2.994vw;
 }
 
+/* Modal CSS */
+
 .minhaConta--modal-delete-account-text{
     font-weight: 400;
     font-size: 1.198vw;
@@ -94,7 +96,84 @@
     margin-top: 1.497vw;
 }
 
+.minhaConta--modal-container{
+    color: #222222;
+    text-align: left;
+}
 
+.minhaConta--modal-text{
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 2px;
+}
+
+.minhaConta--modal-input{
+    width: 580px;
+    border: 2px solid #E9E9E9;
+    border-radius: 5px;
+    outline: none;
+    height: 30px;
+
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.minhaConta--modal-textarea{
+    width: 580px;
+    height: 120px;
+    border: 2px solid #E9E9E9;
+    border-radius: 5px;
+    outline: none;
+
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.minhaConta--modal-select-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.minhaConta--modal-select{
+    width: 150px;
+    border: 2px solid #E9E9E9;
+    border-radius: 5px;
+    outline: none;
+    height: 30px;
+
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.minhaConta--modal-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.minhaConta--modal-button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
 @media(max-width:600px){
     .minhaConta--title{
         font-size: 6.25vw;
@@ -116,10 +195,10 @@
     .minhaConta--table-title{
         font-size: 3vw;
     }
-    .minhaconta--table-ligas-container-header{
+    .minhaConta--table-ligas-container-header{
         margin: 5vw 10% 0 10%;
     }
-    .minhaconta--table-ligas-container-body{
+    .minhaConta--table-ligas-container-body{
         margin-top: 0;
         margin-bottom: 5vw;
         margin: 0 10% 5vw 10%;
